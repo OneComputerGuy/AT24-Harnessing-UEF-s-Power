@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.course-banner.top {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  align-items: center;
+}
+
+.main-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-page-container p {
+  font-size: 1.2rem;
+}
+
+.main-page-container div {
+  text-align: center;
+}
+
+/* banner css */
+
+.scores-banner-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#3e5622aa, #e3d26faa),
+    url('/assets/scores-ai.png');
+  background-size: cover;
+  background-position-y: center;
+  width: 100%;
+}
+
+.scores-banner-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+
+.scores-banner-title span:last-child {
+  font-size: 1.2rem;
+}
+
+.scores-banner-scores {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.7rem;
+}
+
+.scores-banner-scores div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.scores-banner-scores div img {
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.course-banner-announcement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 3rem;
+  border: 2px solid #0008;
+}
+
+.course-banner-announcement span {
+  font-size: 1.6rem;
+}
+
+.course-banner-announcement p {
+  width: 85%;
+  font-size: 1.2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Evaluation Panel Styles */
+
+.evaluation-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.evaluation-wrapper h3 {
+  text-align: center;
+}
+
+.evaluation-wrapper div {
+  font-size: 1rem;
+}
+
+.evaluation-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.evaluation-message p,
+.evaluation-message span {
+  width: 95%;
+  text-wrap: pretty;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.evaluation-form {
+  padding: 1rem 0.4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #9999;
+}
+
+.evaluation-form span {
+  margin-bottom: 0.5rem;
+}
+
+.evaluation-form div {
+  font-size: 0.9rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.evaluation-form div select {
+  width: 3rem;
+  background: none;
+  height: 2rem;
+  padding: 0.3rem;
+  border: 2px solid #3339;
+  border-radius: 0.5rem;
+}
+
+.evaluation-form button {
+  margin-top: 2rem;
+  border: 1px solid #8888;
+  background: none;
+  border-radius: 0.6rem;
+  width: 6rem;
+  height: 2rem;
+}
+
+/* Help Panel styles */
+
+.help-header {
+  margin-bottom: 3rem;
+}
+
+.help-section {
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-section-header {
+  display: flex;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.help-entry {
+  margin: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Library styles */
+
+.library-layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.library-content {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  align-items: stretch;
+  background-color: mintcream;
+}
+
+.library-content aside {
+  width: 10%;
+  padding-right: 2rem;
+  border-right: 2px solid #3333;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.library-content aside div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.library-content aside span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.library-content aside ul {
+  list-style: none;
+}
+
+.library-content article {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.book-card {
+  padding: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #4444;
+  border-radius: 1rem;
+}
+
+.book-card img {
+  border-radius: 0.7rem;
+}
+
+.book-card div h3 {
+  margin-bottom: 0.6rem;
+}
+
+.book-card div p {
+  font-size: 1rem;
+}
+
+.book-card div span {
+  font-size: 0.8rem;
+  color: #2229;
+}
+
+/* Header styles */
+
+header {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: Black;
+  color: #fff;
+}
+
+header div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+header div div {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header div div p:last-child {
+  font-size: 1.3rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav input {
+  padding-left: 0.6rem;
+  border: 2px solid #8888;
+  background: none;
+  background-color: #ddd;
+  height: 2rem;
+  border-radius: 1rem;
+  margin-right: 2rem;
+}
+
+nav ul {
+  display: flex;
+  text-decoration: none;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 0.3rem 0.6rem;
+  border: 2px solid #8888;
+  background: none;
+  background-color: #ddd;
+  height: 2rem;
+  border-radius: 1rem;
+  color: #000;
+}
+
+nav ul li a:hover,
+nav ul li a:visited,
+nav ul li a:link,
+nav ul li a:active {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #aaa;
+}
+
+/* Footer styles */
+
+footer {
+  padding: 0.6rem 0rem;
+  font-size: 0.7rem;
+  width: 100%;
+  color: #fff;
+  background-color: Black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Modal styles */
+
+.course-modal-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.course-modal-content h2 {
+  margin: 0.8rem 0rem;
+}
+
+.course-modal-content img {
+  margin-top: 1rem;
+  align-self: center;
+}
+.course-modal-content p {
+  padding-bottom: 0.4rem;
+}
+
+.grades-modal-content {
+  text-align: center;
+}
+
+.grades-modal-content h2 {
+  margin-bottom: 1rem;
+}
+
+.grades-modal-content p {
+  padding-bottom: 0.8rem;
+}
