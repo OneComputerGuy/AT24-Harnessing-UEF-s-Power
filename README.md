@@ -17,9 +17,9 @@ This code is intended to demostrate during the Anthology Together 2024 conferenc
 
   - When registering the application, use the following URLs for each of the fields:
 
-    - Login initiation URL: https://<<your-domain>>/lti/login/
-    - Tool redirect URL(s): https://<<your-domain>>/lti/uefLaunch/
-    - Tool JWKS URL: https://<<your-domain>>/.well-known/jwks.json
+    - Login initiation URL: https://"replace this with your domain"/lti/login/
+    - Tool redirect URL(s): https://"replace this with your domain"/lti/uefLaunch/
+    - Tool JWKS URL: https://"replace this with your domain"/.well-known/jwks.json
 
 - Save the application information in a safe location for later use
 
@@ -48,11 +48,11 @@ To properly configure the system, you need to create a new placement under the a
 
 In there, click the "Create placement" at the top left of the screen and in the configuration page, input/select the following:
 
-- Label: <<A name for your placement>>
-- Handle: <<a unique handle>>
+- Label: "replace this with a proper name"
+- Handle: "replace this with a unique handle"
 - Availability: Yes
 - Type: Ultra Extension
-- Target Link URI: https://<your domain>/lti/uefLaunch
+- Target Link URI: https://"replace this with your domain"/lti/uefLaunch
 
 Then submit.
 
