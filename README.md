@@ -17,9 +17,9 @@ This code is intended to demostrate during the Anthology Together 2024 conferenc
 
   - When registering the application, use the following URLs for each of the fields:
 
-    - Login initiation URL: https://<your domain>/lti/login/
-    - Tool redirect URL(s): https://<your domain>/lti/uefLaunch/
-    - Tool JWKS URL: https://<your domain>/.well-known/jwks.json
+    - Login initiation URL: https://<<your domain>>/lti/login/
+    - Tool redirect URL(s): https://<<your domain>>/lti/uefLaunch/
+    - Tool JWKS URL: https://<<your domain>>/.well-known/jwks.json
 
 - Save the application information in a safe location for later use
 
@@ -48,8 +48,8 @@ To properly configure the system, you need to create a new placement under the a
 
 In there, click the "Create placement" at the top left of the screen and in the configuration page, input/select the following:
 
-- Label: <A name for your placement>
-- Handle: <a unique handle>
+- Label: <<A name for your placement>>
+- Handle: <<a unique handle>>
 - Availability: Yes
 - Type: Ultra Extension
 - Target Link URI: https://<your domain>/lti/uefLaunch
@@ -64,7 +64,7 @@ To run this code, simply clone the repository to your local machine and run the 
 npm i
 ```
 
-Once it npm finishes the dependencies installation, run `npm run dev` to start the NextJS server which will run the backend API and the frontend of the app.
+Once the dependencies are installed, make a copy of the file `.env.local.example` and name it `.env.local`, then replace the necessary fields inside the file with the data from the application you created. After that, run `npm run dev` to start the NextJS server which will run the backend API and the frontend of the app.
 
 # To tunnel out of your machine
 
