@@ -17,9 +17,9 @@ This code is intended to demostrate during the Anthology Together 2024 conferenc
 
   - When registering the application, use the following URLs for each of the fields:
 
-    - Login initiation URL: https://<<your domain>>/lti/login/
-    - Tool redirect URL(s): https://<<your domain>>/lti/uefLaunch/
-    - Tool JWKS URL: https://<<your domain>>/.well-known/jwks.json
+    - Login initiation URL: https://<<your-domain>>/lti/login/
+    - Tool redirect URL(s): https://<<your-domain>>/lti/uefLaunch/
+    - Tool JWKS URL: https://<<your-domain>>/.well-known/jwks.json
 
 - Save the application information in a safe location for later use
 
@@ -74,4 +74,4 @@ Tunnel options will depend on your use case and we don't vouche any in particula
 
 To open the tunnel using ngrok just run:
 
-`ngrok http 3000`
+`ngrok http --domain="your static domain from Ngrok" 3000`
