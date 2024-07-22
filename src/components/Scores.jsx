@@ -3,15 +3,17 @@ import Image from 'next/image';
 const ScoresBanner = ({}) => {
   return (
     <div className="scores-banner-wrapper">
-      <Image
-        src="/assets/AT-Logo.png"
-        alt="Anthology Together logo"
-        width={125}
-        height={50}
-      />
-      <div className="scores-banner-title">
-        <span>DevCon College</span>
-        <span>Soccer Summer League</span>
+      <div className="scores-banner-title-wrapper">
+        <Image
+          src="/assets/AT-Logo.png"
+          alt="Anthology Together logo"
+          width={125}
+          height={50}
+        />
+        <div className="scores-banner-title">
+          <span>DevCon College</span>
+          <span>Soccer Summer League</span>
+        </div>
       </div>
       <div className="scores-banner-scores">
         <div>
@@ -39,6 +41,7 @@ const ScoresBanner = ({}) => {
           />
         </div>
       </div>
+      <div></div>
     </div>
   );
 };

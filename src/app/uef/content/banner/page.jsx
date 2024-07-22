@@ -4,8 +4,8 @@ import ScoresBanner from '@/components/Scores';
 const BannerPage = ({}) => {
   return (
     <>
-      <ScoresBanner />
-      {/* <AnnouncementBanner /> */}
+      {/* <ScoresBanner /> */}
+      <AnnouncementBanner />
     </>
   );
 };

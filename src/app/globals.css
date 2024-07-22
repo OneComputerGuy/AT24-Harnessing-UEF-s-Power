@@ -24,6 +24,7 @@ main {
 }
 
 .main-page-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,16 +43,22 @@ main {
 /* banner css */
 
 .scores-banner-wrapper {
+  position: relative;
   display: flex;
   gap: 2rem;
   padding: 0.3rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: linear-gradient(#3e5622aa, #e3d26faa),
     url('/assets/scores-ai.png');
   background-size: cover;
   background-position-y: center;
   width: 100%;
+}
+
+.scores-banner-title-wrapper {
+  display: flex;
+  gap: 1rem;
 }
 
 .scores-banner-title {
@@ -65,6 +72,10 @@ main {
 }
 
 .scores-banner-scores {
+  top: 10;
+  left: 50%;
+  translate: -50%;
+  position: absolute;
   display: flex;
   align-items: center;
   gap: 0.7rem;
