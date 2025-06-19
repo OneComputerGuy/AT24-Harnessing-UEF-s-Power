@@ -1,3 +1,5 @@
+import { applicationDomain } from '../entry.js';
+
 export const renderLogoutModal = (tunnel) => {
   tunnel.postMessage({
     type: 'portal:modal',
@@ -53,7 +55,7 @@ export const renderCourseModal = (tunnel) => {
             {
               tag: 'iframe',
               props: {
-                src: 'https://notlocalhost.ngrok.dev/uef/content/modal?src=course',
+                src: `https://${applicationDomain}/uef/content/modal?src=course`,
                 style: {
                   flex: '1 1 auto',
                   width: '100%',
@@ -96,7 +98,7 @@ export const renderGradesModal = (tunnel) => {
             {
               tag: 'iframe',
               props: {
-                src: 'https://notlocalhost.ngrok.dev/uef/content/modal?src=grades',
+                src: `https://${applicationDomain}/uef/content/modal?src=grades`,
                 style: {
                   flex: '1 1 auto',
                   width: '100%',

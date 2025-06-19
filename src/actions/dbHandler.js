@@ -24,3 +24,4 @@ export const updateSessionData = (data) => {
 export const getSpecificSession = (id) => {
   return db.prepare(`SELECT * FROM uef_data WHERE state=?`).get(id);
 };
+

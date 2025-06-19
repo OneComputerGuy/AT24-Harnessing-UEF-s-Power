@@ -30,7 +30,7 @@ This code is intended to demostrate during the Anthology Together 2024 conferenc
 > If you're using Ngrok as your tunnel providers, make sure you configure a static domain for your application.
 > If you don't do it, each time you launch Ngrok it will give you a random domain and you will have to edit your Developer Portal application each time
 
-Example of the configuration within the Developer Portal (Note: the domain https://notlocalhost.ngrok.dev was used for demonstrations and is tied to our account, you will have to replace that domain with your own)
+Example of the configuration within the Developer Portal (Note: the domain https://uef.ngrok.io was used for demonstrations and is tied to our account, you will have to replace that domain with your own)
 
 ![Developer Portal configuration](https://github.com/OneComputerGuy/AT24-Harnessing-UEF-s-Power/blob/main/assets/devportal-config.png?raw=true)
 

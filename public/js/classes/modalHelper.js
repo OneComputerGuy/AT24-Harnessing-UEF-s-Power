@@ -16,7 +16,7 @@ export const modalHandler = (message, tunnel) => {
   if (message.data.eventType === 'route') {
     if (
       message.data.routeName.includes('peek.course.outline') &&
-      message.data.routeData.courseId === '_3_1'
+      message.data.routeData.courseId === '_4_1'
     ) {
       setTimeout(() => {
         renderCourseModal(tunnel);

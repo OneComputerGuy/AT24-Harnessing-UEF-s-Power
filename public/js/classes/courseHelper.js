@@ -4,6 +4,8 @@ import {
   renderCourseMenuSimple,
 } from './courseMenuStructures.js';
 
+import { applicationDomain } from '../entry.js';
+
 export const renderCourseContent = (portalId, frameSource, tunnel) => {
   tunnel.postMessage({
     type: 'portal:render',
@@ -35,7 +37,7 @@ export const courseHandler = (message, tunnel) => {
     // This checks what to do based on the course ID
 
     // Course _5_1 will show a course evaluation
-    if (message.data.routeData.courseId === '_5_1') {
+    if (message.data.routeData.courseId === '_6_1') {
       // As a good practice, we introduce a 2 second delay before loading the panel
       // This is to ensure the course has loaded correctly before showing any other information to the user.
       setTimeout(() => {
@@ -57,9 +59,8 @@ export const courseHandler = (message, tunnel) => {
     message.data.selector === 'course.outline.details' &&
     message.data.selectorData.registrationName === 'Course Links'
   ) {
-    renderCourseMenuSimple;
-    // renderCourseMenuDropdown(message.data.portalId, '', tunnel); // Renders a course details dropdown menu
-    renderCourseMenuSimple(message.data.portalId, '', tunnel); // Renders a simple course detail link
+    renderCourseMenuDropdown(message.data.portalId, '', tunnel); // Renders a course details dropdown menu
+    // renderCourseMenuSimple(message.data.portalId, '', tunnel); // Renders a simple course detail link
   }
 
   // If the message received has a type "portal:callback" it means an item we created was created
@@ -106,7 +107,7 @@ export const courseHandler = (message, tunnel) => {
     if (message.data.correlationId === 'evaluation-panel') {
       renderCourseContent(
         message.data.portalId,
-        'https://notlocalhost.ngrok.dev/uef/content/evaluation',
+        `https://${applicationDomain}/uef/content/evaluation`,
         tunnel,
       );
     }
@@ -114,7 +115,7 @@ export const courseHandler = (message, tunnel) => {
     if (message.data.correlationId === 'simple-menu-panel') {
       renderCourseContent(
         message.data.portalId,
-        'https://notlocalhost.ngrok.dev/uef/content/library',
+        `https://${applicationDomain}/uef/content/library`,
         tunnel,
       );
     }
@@ -122,7 +123,7 @@ export const courseHandler = (message, tunnel) => {
     if (message.data.correlationId === 'course-menu-it-resources') {
       renderCourseContent(
         message.data.portalId,
-        'https://notlocalhost.ngrok.dev/uef/content/help',
+        `https://${applicationDomain}/uef/content/help`,
         tunnel,
       );
     }
@@ -130,7 +131,7 @@ export const courseHandler = (message, tunnel) => {
     if (message.data.correlationId === 'course-menu-academic-resources') {
       renderCourseContent(
         message.data.portalId,
-        'https://notlocalhost.ngrok.dev/uef/content/library',
+        `https://${applicationDomain}/uef/content/library`,
         tunnel,
       );
     }
@@ -144,7 +145,7 @@ export const courseHandler = (message, tunnel) => {
   ) {
     renderCourseContent(
       message.data.portalId,
-      'https://notlocalhost.ngrok.dev/uef/content/banner',
+      `https://${applicationDomain}/uef/content/banner`,
       tunnel,
     );
   }

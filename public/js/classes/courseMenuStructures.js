@@ -1,3 +1,5 @@
+import { applicationDomain } from '../entry.js';
+
 export const renderCourseMenuSimple = (portalId, _, tunnel) => {
   tunnel.postMessage({
     type: 'portal:render',
@@ -21,7 +23,7 @@ export const renderCourseMenuSimple = (portalId, _, tunnel) => {
               tag: 'img',
               props: {
                 alt: 'Icon for the UEF integration menu',
-                src: 'https://notlocalhost.ngrok.dev/assets/book.png',
+                src: `https://uef.ngrok.io/assets/book.png`,
                 height: 24,
                 width: 24,
               },
@@ -83,7 +85,7 @@ export const renderCourseMenuDropdown = (portalId, _, tunnel) => {
               tag: 'img',
               props: {
                 alt: '',
-                src: 'https://notlocalhost.ngrok.dev/assets/book.png',
+                src: `https://${applicationDomain}/assets/book.png`,
                 height: 24,
                 width: 24,
               },

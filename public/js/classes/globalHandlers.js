@@ -1,3 +1,5 @@
+import { applicationDomain } from '../entry.js';
+
 import { registerHelpProviders } from './helpHandler.js';
 
 const globalHandlersRegistration = (tunnel) => {
@@ -21,7 +23,7 @@ const globalHandlersRegistration = (tunnel) => {
   //           {
   //             tag: 'img',
   //             props: {
-  //               src: 'https://notlocalhost.ngrok.dev/assets/library.svg',
+  //               src: `https://${applicationDomain}/assets/library.svg`,
   //               height: 24,
   //               width: 24,
   //             },

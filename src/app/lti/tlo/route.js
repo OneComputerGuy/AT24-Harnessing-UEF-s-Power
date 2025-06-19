@@ -5,8 +5,10 @@ export const GET = async (req) => {
 
   const formPayload = new URLSearchParams({ grant_type: 'authorization_code' });
 
+  const baseRedirectUrl = `https://${process.env.APP_DOMAIN}/lti/tlo`;
+
   const tokenRequest = await fetch(
-    `${sessionData.server}/learn/api/public/v1/oauth2/token?code=${req.nextUrl.searchParams.get('code')}&redirect_uri=${encodeURIComponent('https://notlocalhost.ngrok.dev/lti/tlo')}`,
+    `${sessionData.server}/learn/api/public/v1/oauth2/token?code=${req.nextUrl.searchParams.get('code')}&redirect_uri=${encodeURIComponent(baseRedirectUrl)}`,
     {
       method: 'POST',
       headers: {
@@ -26,6 +28,6 @@ export const GET = async (req) => {
   });
 
   return Response.redirect(
-    `https://notlocalhost.ngrok.dev/uef/launch?state=${req.nextUrl.searchParams.get('state')}`,
+    `https://${process.env.APP_DOMAIN}/uef/launch?state=${req.nextUrl.searchParams.get('state')}`,
   );
 };

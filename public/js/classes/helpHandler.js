@@ -1,3 +1,5 @@
+import { applicationDomain } from '../entry.js';
+
 const registerHelper = (tunnel, id, name, icon) => {
   console.log(`Creating help registry for ${name}`);
   tunnel.postMessage({
@@ -15,13 +17,13 @@ export const registerHelpProviders = (tunnel) => {
   // tunnel,
   // 'help-it-issue',
   // 'College IT support',
-  // 'https://notlocalhost.ngrok.dev/assets/technical-support.ico',
+  // 'https://example.com/assets/technical-support.ico',
   // );
   registerHelper(
     tunnel,
     'helpschoolresources',
     'School resources',
-    'https://notlocalhost.ngrok.dev/assets/library.svg',
+    `https://${applicationDomain}/assets/library.svg`,
   );
 };
 
@@ -52,7 +54,7 @@ export const helpHandler = (message, tunnel) => {
       contents: {
         tag: 'iframe',
         props: {
-          src: 'https://notlocalhost.ngrok.dev/uef/content/help',
+          src: `https://${applicationDomain}/uef/content/help`,
           style: {
             flex: '1 1 auto',
             width: '100%',

@@ -34,7 +34,9 @@ export const POST = async (req) => {
     api_token: '',
   });
 
+  const baseRedirectUrl = `https://${process.env.APP_DOMAIN}/lti/tlo`;
+
   return Response.redirect(
-    `${body['https://purl.imsglobal.org/spec/lti/claim/tool_platform'].url}/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=${encodeURIComponent('https://notlocalhost.ngrok.dev/lti/tlo')}&response_type=code&one_time_session_token=${body['https://blackboard.com/lti/claim/one_time_session_token']}&client_id=${process.env.APP_KEY}&scope=*&state=${launchData.get('state')}`,
+    `${body['https://purl.imsglobal.org/spec/lti/claim/tool_platform'].url}/learn/api/public/v1/oauth2/authorizationcode?redirect_uri=${encodeURIComponent(baseRedirectUrl)}&response_type=code&one_time_session_token=${body['https://blackboard.com/lti/claim/one_time_session_token']}&client_id=${process.env.APP_KEY}&scope=*&state=${launchData.get('state')}`,
   );
 };

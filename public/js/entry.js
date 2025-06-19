@@ -12,6 +12,9 @@ if (!window.parent) {
 
 // Gets the status information from the page contents so we can use it on the UEF requests
 const apiToken = document.getElementById('api_token').textContent || '';
+export const applicationDomain =
+  document.getElementById('app_domain').textContent || '';
+console.log('🚀 ~ applicationDomain:', applicationDomain);
 const learnServer =
   document.getElementById('server').textContent || 'https://blackboard.com';
 // const userId = document.getElementById('user_id').textContent || '';
